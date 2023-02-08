@@ -1,0 +1,51 @@
+{% extends 'blank.html' %}
+
+{% block title %}
+	Главная страница
+{% endblock title %}
+
+{% block navigation %}
+	<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Hot Deals</a></li>
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">Laptops</a></li>
+						<li><a href="#">Smartphones</a></li>
+						<li><a href="#">Cameras</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+{% endblock navigation %}
+{% block content %}
+	<div  class="kkk">
+        <h1>Log_in</h1>
+		{% for error in login_form.non_field_errors %}
+			<span><h3>{{ error }}</h3></span>
+		{% endfor %}
+        <form method="post" action="{% url 'log_in' %}">
+			{% csrf_token %}
+            <input type="text" placeholder="User_name" class="form-control" id="id_username" name="username"><label for="id_username">User_name</label><br>
+            <input type="password" placeholder="Password" class="form-control" id="id_password" name="password"><label for="id_password">Password</label><br>
+            <button type="submit" class="btn btn-success">Log_in</button>
+        </form>
+    </div>
+		<div>
+			<h5> DO you have a account?</h5>
+			<span><a href="{% url 'register' %}"><b>Registration</b></a><a href="{% url 'log_out' %}"><b>Log_out</b></a></span>
+		</div>
+
+	</div>
+{% endblock %}

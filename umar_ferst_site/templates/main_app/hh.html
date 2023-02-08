@@ -1,0 +1,41 @@
+{% extends 'main/blank.html' %}
+
+{% block title %}
+	Главная страница
+{% endblock title %}
+
+{% block navigation %}
+	<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Hot Deals</a></li>
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">Laptops</a></li>
+						<li><a href="#">Smartphones</a></li>
+						<li><a href="#">Cameras</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+{% endblock navigation %}
+{% block content %}
+	<div class="kkk">
+        <h1>Log_in</h1>
+        <form method="post">
+            <imput type="text" placecholder="User_name" class="form-control"></imput><br>
+            <imput type="text" placecholder="Password" class="form-control"></imput><br>
+            <button type="submit" class="btn btn-success">Log_in</button>
+        </form>
+    </div>
+{% endblock %}
